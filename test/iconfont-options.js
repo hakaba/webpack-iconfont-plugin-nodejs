@@ -1,14 +1,16 @@
 var path = require('path');
 var dir = 'test/web_project/'
+
+
 module.exports = {
     fontName: 'my-app-icon',
-    // template: path.join(dir, 'src/fonts/css.njk'),
-    htmlTemplate: path.join(dir, 'src/fonts/css.njk'),
+    template: path.resolve('./test/templates/css.njk'),
+    htmlTemplate: path.resolve('./test/templates/html.njk'),
     svgs: path.join(dir, 'src/svgs/*.svg'),
-    fontsOutput: path.join(dir, 'src/fonts/'),
-    cssOutput: path.join(dir, 'src/fonts/font.css'),
-    jsOutput: path.join(dir, 'src/fonts/fonts.js'),
-    htmlOutput: path.join(dir, 'src/fonts/font-preview.html'),
-    //formats: ['ttf', 'woff2', 'woff', 'svg'],
+    fontsOutput: path.resolve('./dist/fonts/'),
+    cssOutput: path.resolve('./dist/css/font.css'),
+    jsOutput: path.resolve('./dist/js/fonts.js'),
+    htmlOutput: path.resolve('./dist/html/font-preview.html'),
+    formats: ['ttf', 'woff2', 'woff', 'svg'],
     cssPrefix: 'my-icon'
 };
